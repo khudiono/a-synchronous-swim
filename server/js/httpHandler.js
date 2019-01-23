@@ -6,7 +6,8 @@ module.exports = (req, res) => {
   if (req.method === 'GET') {
     var direction = directions[Math.floor(Math.random() * 4)];
     res.writeHead(200, headers);
-    res.end(JSON.stringify(direction));
+    // res.end(JSON.stringify(direction));
+    res.end(JSON.stringify(dequeue()));
   }else if (req.method === 'OPTIONS') {
     res.writeHead(200, headers);
     res.end();
