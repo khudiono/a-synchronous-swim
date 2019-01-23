@@ -7,9 +7,8 @@ const SwimTeam = {
 
   move: (direction) => {
     if (!direction) { return; }
-    console.log(`Lets go: ${direction}`);
-
-    // set the swim-team's direction
+    // console.log(`Lets go: ${direction}`);
+    // console.log(httpFetcher(direction))
     $('.swimmer')
       .removeClass((idx, classNames) => {
         var name = classNames.match(/(turn-\w+)/);
@@ -52,7 +51,7 @@ const SwimTeam = {
         SwimTeam.coords.left += 5;
       }
       break;
-    } 
+    }
   }
 
 };
